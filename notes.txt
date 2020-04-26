@@ -1,0 +1,30 @@
+# Notes
+
+Overview:
+- Every time series *can* be perfectly represented by a sum of sine waves.
+- That does not, however, imply that that power at a particular frequency in a power 
+  spectrum implies any rhythmic property.
+- Real neural signals exhibit 1/f like properties in power spectra.
+- The claim that a particular frequency reflects, even partially, rhythmic activity requires 
+  extra validation that there is evidence for rhythmic activity at this frequency.
+- Note that the pattern of power across frequencies _could_, in theory, arise from a generative
+  process in which some large number of distinct oscillations contribute power, with some kind of
+  coordinated relative power across frequencies. ("TinyOscillators")
+- However, a simple LFP model offers a much simpler explanation in which the 1/f activity
+  is expected under a model in which LFP data is driven primarily by PSPs, and in this model,
+  the power spectrum is not considered to reflect rhythmic properties. ("NeuralTimeSeries)
+- So, while there may be, and *sometimes* are rhythmic properties in neural time series,
+  the observation that there is power in a particular frequency is not sufficient to argue
+  for the presence of rhythmic activity. 
+- We argue that the 1/f nature of neural time series is most likely to reflect aperiodic activity, 
+  and a claim that a particular frequency reflects, even partially, rhythmic activity requires extra
+  validation that there is evidence for rhythmic activity at this frequency. 
+
+Questions:
+- When filtering a 1/f signal in a band-by-band manner, don't we expect the magnitude of the filtered signals to scale with the frequency range? As in, delta should have greate average power than beta, etc? We don't seem to see this.
+- Could be interesting to run simulations with filtered signals and analytic amplitude analyses on how easy it is to get "significant" changes, from filtering aperiodic signals, and simulating changes in aperiodic signals. This could also include simulating for 'significant' frequency band interactions, such as PAC or amplitude correlations, again, (also with both static aperiodic signals, and with shifts in aperiodic activity). 
+
+ToDos:
+- Finish fixing the concatenation of cycles in NDSP.
+- Add phase variation to simulation rhythms. 
+- Simulate 'tiny oscillators' with random phases per rhythm.
